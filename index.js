@@ -25,6 +25,12 @@ lib.ssMetadata = [];
 
 
 
+(lib.bg = function() {
+	this.initialize(img.bg);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,320,50);
+
+
 (lib.image1 = function() {
 	this.initialize(img.image1);
 }).prototype = p = new cjs.Bitmap();
@@ -40,13 +46,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,42,45);
 (lib.logo = function() {
 	this.initialize(img.logo);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,195,58);
-
-
-(lib.Untitled2 = function() {
-	this.initialize(img.Untitled2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,320,50);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,195,58);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -1028,7 +1028,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(240));
 
 	// bg
-	this.instance_9 = new lib.Untitled2();
+	this.instance_9 = new lib.bg();
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(240));
 
@@ -1045,10 +1045,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"image1.png?1657800574543", id:"image1"},
-		{src:"image2.png?1657800574543", id:"image2"},
-		{src:"logo.png?1657800574543", id:"logo"},
-		{src:"Untitled2.png?1657800574543", id:"Untitled2"}
+		{src:"bg.png?1657800892445", id:"bg"},
+		{src:"image1.png?1657800892445", id:"image1"},
+		{src:"image2.png?1657800892445", id:"image2"},
+		{src:"logo.png?1657800892445", id:"logo"}
 	],
 	preloads: []
 };
